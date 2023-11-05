@@ -1,0 +1,29 @@
+.btcCurrencyDisplay {
+  background-color: darken($c-primary, $amount: 4);
+  padding: $p-l $p-l * 2;
+
+  &-valueContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: $fz-extralarge;
+    font-weight: bold;
+    justify-content: flex-end;
+  }
+
+  &-heading {
+    color: $text-color;
+    font-weight: bold;
+    font-size: $fz-medium;
+    margin: 0 0 - ($m-s) 0;
+  }
+
+  &-code {
+    color: lighten($text-color, $amount: 6);
+  }
+
+  &-updated {
+    font-size: $fz-small;
+    font-weight: normal;
+    margin-top: -($m-xs);
+  }
+}

@@ -1,0 +1,13 @@
+.btcCurrentPrice {
+  background: $c-primary;
+  border-bottom: 1px solid darken($c-primary, 10%);
+  border-top: 1px solid darken($c-primary, 10%);
+  color: white;
+  display: flex;
+  padding: $p-s $p-xl;
+  text-align: right;
+
+  @media screen and (min-width: $mq-medium) {
+    padding: $p-s $p-xl * 2;
+  }
+}

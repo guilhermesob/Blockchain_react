@@ -1,0 +1,112 @@
+.block {
+  background-color: $c-bg-color-block;
+  border: 1px gray solid;
+  display: flex;
+  flex-direction: column;
+  margin: $m-xl;
+  padding: $m-xl;
+  font-size: $fz-small;
+
+  @media screen and (min-width: $mq-medium) {
+    margin: $m-xl $m-xl * 2;
+  }
+
+  &--mining {
+    background-image: url('https://i.giphy.com/media/l3q2XB76CaWPggiNW/source.gif');
+    background-size: cover;
+    color: white;
+  }
+
+  &--mined {
+    background-color: lighten($c-accent, 25%);
+  }
+
+  &-heading {
+    font-size: $fz-large;
+    margin: 0 0 $m-m;
+    text-align: left;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  &-blockData {
+    &Container {
+      > label {
+        background-color: $c-accent;
+        color: white;
+        margin: $m-m 0 0;
+      }
+    }
+  }
+
+  &-label {
+    &Container {
+      background-color: lighten($c-bg-color-block, 3%);
+      display: flex;
+      margin-bottom: $m-xs;
+      padding: $p-xs $p-s;
+
+      &--mined {
+        background-color: lighten($c-accent, 23%);
+      }
+    }
+
+    &Column {
+      padding: 0;
+      flex-basis: 50%;
+
+      @media screen and (min-width: $mq-medium) {
+        flex-basis: 30%;
+      }
+    }
+
+    &Data {
+      padding: 0;
+      vertical-align: top;
+      flex-basis: 70%;
+
+      &--isHash {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &-data {
+    min-height: 150px;
+    padding: $p-s;
+    width: 100%;
+  }
+
+  &-disabledData {
+    border: 1px solid gray;
+    background-color: white;
+    margin: $m-s 0;
+    padding: $p-m $p-s;
+    width: 100%;
+  }
+
+  &-button {
+    cursor: pointer;
+    background-color: $c-accent;
+    font-weight: bold;
+    padding: $p-m;
+    margin-top: $m-l;
+    max-width: initial;
+
+    @media screen and (min-width: $mq-medium) {
+      max-width: 250px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: lighten($c-accent, 10%);
+    }
+  }
+}
